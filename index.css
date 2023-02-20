@@ -1,0 +1,79 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+  @font-face {
+    font-family:digital-7;
+    src: url(digital-7.ttf);
+  }
+
+  :root{
+    --light-color:aqua;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"poppins";
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color:lightseagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+h2{
+    color: black;
+    font-size: 50px;
+    font-weight: 100px;
+    font-family: digital-7;  
+    margin-bottom: 40px;
+}
+
+.frame{
+    width: 600px;
+    height: 300px;
+    background-color:black;
+    border: 30px solid purple;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    font-size: 100px;
+    text-align: center;
+    line-height: 170px;
+}
+
+.clock{
+    font-family: digital-7;
+    color: white;
+    text-shadow: 0 0 20px var(--light-color);
+    position: relative;
+}
+/* .clock::after{
+    content: attr(data-text);
+    position: absolute;
+    left: 18px;
+    top: 0;
+    filter: blur(40px);
+} */
+
+.clock::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--light-color);
+    width: 100%;
+    height: 100%;
+    opacity: 0.01;
+    filter: blur(40px);
+
+}
